@@ -36,12 +36,12 @@ export default function TextForm(props) {
   const handleCapitalize = () => {
     let newText = text
       .split(" ")
-      .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
+      .map((el) => el.charAt(0).toUpperCase() + el.slice(1).toLowerCase())
       .join(" ");
     setText(newText);
     props.showAlert("Converted to Capitalized Case!", "success");
+};
 
-  };
 
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
